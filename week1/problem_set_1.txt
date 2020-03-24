@@ -1,0 +1,10 @@
+1. nlog(n)
+
+2. True
+
+3. Always
+
+4. O(nk)
+
+5. acedb
+n^0.5, n^1.5, n^5/3, 2^((log(n))^0.5), 10^n
