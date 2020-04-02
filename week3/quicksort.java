@@ -49,8 +49,7 @@ public class quicksort {
         myPivotMethod = new pivotMethodInterface() {
         	public int choosePivot(int[] list, int s, int l) {
         		int t,mid;
-        		if ((l-s+1)%2==1) { mid = (l-s+1)/2; }
-        		else { mid = (l-s+1)/2-1; }
+        		mid = (l-s)/2+s;
         		if (list[s] > list[mid]) { t = s; s = mid; mid = t; }
         		if (list[mid] > list[l]) {
         			t=l; l = mid; mid = t;
@@ -121,12 +120,12 @@ public class quicksort {
 	public static long sort(int[] list, int startIndex, int lastIndex, pivotMethodInterface pivotMethod) {
 		int pivot = pivotMethod.choosePivot(list,startIndex,lastIndex);
 		pivot = partition(list,startIndex,lastIndex,pivot);
-		long comparisonCount = 0;
+		long comparisonCount = lastIndex+1-startIndex-1;
 		if ((pivot-1)>startIndex) {
-			comparisonCount += sort(list,startIndex,pivot-1,pivotMethod) + pivot - startIndex - 1;
+			comparisonCount += sort(list,startIndex,pivot-1,pivotMethod);
 		}
 		if (lastIndex>(pivot+1)) {
-			comparisonCount += sort(list,pivot+1,lastIndex,pivotMethod) + lastIndex+1 - (pivot+1) - 1;
+			comparisonCount += sort(list,pivot+1,lastIndex,pivotMethod);
 		}
 		return(comparisonCount);	
 	}
