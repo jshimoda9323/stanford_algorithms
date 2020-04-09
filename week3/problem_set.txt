@@ -1,0 +1,14 @@
+1.
+1-2a
+
+2.
+
+3.
+log(n),n
+
+4.
+23
+
+5.
+Y and Z not independent, E[Y*Z] != E[Y]*E[Z]
+
