@@ -93,40 +93,23 @@ public class scc {
 		GraphNode node = inputGraph[nodeID];
 
 		int nodesExplored = 0;
-		Stack<Integer> nodeStack = new Stack<Integer>();
 		Stack<Integer> nodesToExplore = new Stack<Integer>();
-		Stack<Integer> edgesPerNode = new Stack<Integer>();
 		
 		nodesToExplore.push(nodeID);
-		edgesPerNode.push(1);
 		
 		while(nodesToExplore.size() > 0) {
-			nodeID = nodesToExplore.pop();
+			nodeID = nodesToExplore.peek();
 			node = inputGraph[nodeID];
-			
-			int edgesRemaining = edgesPerNode.pop();
-			edgesRemaining--;
-			edgesPerNode.push(edgesRemaining);
-
-			if (node.isExplored() == false) {
+			if (node.isExplored()) {
+				nodesToExplore.pop();
+			} else {
+				currentTime++;
+				node.setFinishingTime(currentTime);
 				nodesExplored++;
 				node.setExplored(true);
 				node.setLeader(sourceNodeIndex);
-				if (node.edgeList.size() > 0) {
-					for (int i = node.edgeList.size()-1; i>=0; i--) {
-						nodesToExplore.push(node.edgeList.get(i));
-					}
-					edgesPerNode.push(node.edgeList.size());
-					nodeStack.push(nodeID);
-				}
-			}
-			while((edgesPerNode.size() > 0)&&(edgesPerNode.peek() == 0)) {
-				edgesPerNode.pop();
-				if (nodeStack.size() > 0) {
-					nodeID = nodeStack.pop();
-					node = inputGraph[nodeID];
-					currentTime++;
-					node.setFinishingTime(currentTime);
+				for (int i = node.edgeList.size()-1; i>=0; i--) {
+					nodesToExplore.push(node.edgeList.get(i));
 				}
 			}
 		}
