@@ -16,9 +16,10 @@ public class dsp {
         	String line = inScanner.nextLine();
         	String[] lineElements = line.split("\\s+");
         	GraphNode n = new GraphNode();
+        	int nodeID = Integer.parseInt(lineElements[0]);
         	for (int i = 1; i < lineElements.length; i++) {
         		String[] destLenPair = lineElements[i].split(",");
-        		n.destinations.add(new NodeReference(Integer.parseInt(destLenPair[0]),Integer.parseInt(destLenPair[1]),i));
+        		n.destinations.add(new NodeReference(Integer.parseInt(destLenPair[0]),Integer.parseInt(destLenPair[1]),nodeID));
         	}
         	graph.addNode(n);
           }
@@ -29,7 +30,6 @@ public class dsp {
 		
 		dijkstraShortestPath(graph,1);
 		
-		//graph.print();
 		graph.getNode(7).printDistance();
 		graph.getNode(37).printDistance();
 		graph.getNode(59).printDistance();
@@ -40,7 +40,6 @@ public class dsp {
 		graph.getNode(165).printDistance();
 		graph.getNode(188).printDistance();
 		graph.getNode(197).printDistance();
-
 	}
 	
 	static void dijkstraShortestPath(Graph g, int sourceID) {
@@ -56,11 +55,15 @@ public class dsp {
 			NodeReference smallest = frontier.poll();
 			GraphNode destNode = g.getNode(smallest.id);
 			
+			if (g.getNode(smallest.id).processed) { continue; }
+			
 			destNode.computedDistance = g.getNode(smallest.source).computedDistance + smallest.weight;
 			destNode.processed = true;
 			
 			for (NodeReference e : destNode.destinations) {
-				if (!g.getNode(e.id).processed) { frontier.add(e); }
+				if (g.getNode(e.id).processed == false) {
+					e.score = g.getNode(e.source).computedDistance + e.weight;
+					frontier.add(e); }
 			}
 		}
 	}
