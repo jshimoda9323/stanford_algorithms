@@ -49,15 +49,18 @@ public class dsp {
 		GraphNode sourceNode = g.getNode(sourceID);
 		sourceNode.processed = true;
 		sourceNode.computedDistance = 0;
-		for (NodeReference d : sourceNode.destinations) { frontier.add(d); }
+		for (NodeReference d : sourceNode.destinations) {
+			d.score = d.weight;
+			frontier.add(d);
+		}
 		
 		while (!frontier.isEmpty()) {
 			NodeReference smallest = frontier.poll();
 			GraphNode destNode = g.getNode(smallest.id);
 			
-			if (g.getNode(smallest.id).processed) { continue; }
+			if (destNode.processed) { continue; }
 			
-			destNode.computedDistance = g.getNode(smallest.source).computedDistance + smallest.weight;
+			destNode.computedDistance = smallest.score;
 			destNode.processed = true;
 			
 			for (NodeReference e : destNode.destinations) {
