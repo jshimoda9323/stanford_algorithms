@@ -34,6 +34,4 @@ public class crappyhash {
 		return(hmap.keySet());
 	}
 	
-	
-
 }

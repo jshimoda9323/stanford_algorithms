@@ -45,10 +45,6 @@ public class TwoSum {
 			window.putAll(bucketB);
 			window.putAll(bucketC);
 			
-			if (window.keySet().size() >= 100) {
-				System.out.println("This can be more efficient.");
-				return;
-			}
 			for (Long key1 : window.keySet()) {
 				for (Long key2 : window.keySet()) {
 					if (key1 != key2) {
