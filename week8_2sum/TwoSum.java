@@ -6,9 +6,9 @@ import java.util.*;
 public class TwoSum {
 
 	public static void main(String[] args) {
-		crappyhash hmap = new crappyhash();
+		crappyhash hmap = new crappyhash(); // A hash table containing hash tables
 		Integer targetValueCount = 0;
-		boolean[] range = new boolean[20001];
+		boolean[] targets = new boolean[20001];
 		
 		if (args.length != 1) { System.err.println("Expecting input filename."); return; }
 		File inFile = new File(args[0]);
@@ -30,7 +30,6 @@ public class TwoSum {
 		Long[] lbuckets = new Long[buckets.size()];
 		lbuckets = buckets.toArray(lbuckets);
 		
-		System.out.println("Total buckets="+lbuckets.length);
 		bucketA = null;
 		bucketB = new HashMap<Long,Integer>();
 		bucketC = new HashMap<Long,Integer>();
@@ -50,15 +49,15 @@ public class TwoSum {
 					if (key1 != key2) {
 						Long rangeIdx = key1+key2+10000;
 						if ((rangeIdx >= 0)&&(rangeIdx < 20001)) {
-							range[rangeIdx.intValue()] = true;
+							targets[rangeIdx.intValue()] = true;
 						}
 					}
 				}
 			}
 		}
 		
-		for (int rangeIdx = 0; rangeIdx < range.length; rangeIdx++) {
-			if (range[rangeIdx]) {
+		for (int rangeIdx = 0; rangeIdx < targets.length; rangeIdx++) {
+			if (targets[rangeIdx]) {
 				targetValueCount++;
 			}
 		}
