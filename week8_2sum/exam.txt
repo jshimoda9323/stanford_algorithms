@@ -1,0 +1,35 @@
+1.
+If P has only 1 edge, then P definitely remains the shortest path
+P might or might not remain the shortest path
+
+2.
+O(n*m)
+
+3.
+O(log(n)) and O(log(n))
+
+4.
+might or might not remain the same
+
+5.
+Depth first search can be used to compute a topological ordering or a directed acyclic graph in O(m+n) time
+Breadth first search can be used to compute the shortest paths in O(m+n) time 
+Depth first search can be used to compute the strongly connected components of a directed graph in O(m+n) time
+
+6.
+Whenever it is directed acyclic
+
+7.
+O(n) and O(1)
+
+8.
+Repeated minimum computations
+Repeated maximum computations
+
+9.
+Repeated lookups
+
+10.
+It may or may not correctly compute the shortest path lengths
+It is guaranteed to terminate
+
