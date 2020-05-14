@@ -1,0 +1,16 @@
+1.
+The hash function should spread out every dataset....
+
+2.
+n/m
+
+3.
+1/m^2
+
+4.
+n(n-1)/2m
+
+5.
+less than 0.1%
+
+
