@@ -32,7 +32,6 @@ public class Graph {
 		PriorityQueue<Node> nodeHeap = new PriorityQueue<Node>(new nodeComparator());
 		long totalCost;
 		
-		// Initialize
 		totalCost = 0;
 		nodes[1].visited = true;
 		for (int edgeRef : nodes[1].edgeRefs) {

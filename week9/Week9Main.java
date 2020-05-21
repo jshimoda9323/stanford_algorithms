@@ -25,25 +25,12 @@ public class Week9Main {
 		}
 		
 		schedule.sortByScoreDiff();
-		//System.out.println("Job list by scoreDiff");
-		//schedule.printByDiff();
 		total = schedule.computeWeightedCompletion();
 		System.out.println("Sum of weighted completion times by scoreDiff: "+total);
 		schedule.sortByScoreRatio();
-		//System.out.println("Job list by scoreRatio");
-		//schedule.printByRatio();
 		total = schedule.computeWeightedCompletion();
 		System.out.println("Sum of weighted completion times by scoreRatio: "+total);
 		
-
-	}
-	
-	public static long sumScoreDiff(Job[] list) {
-		long sum = 0;
-		for (int i = 0; i < list.length; i++) {
-			sum += (long)list[i].scoreDiff;
-		}
-		return(sum);
 	}
 
 }
