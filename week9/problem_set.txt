@@ -5,7 +5,7 @@ At each iteration, pick the remaining request with the earliest finishing time.
 Schedule the requests in increasing order of deadline dj.
 
 3.
-Neither is correct.
+Alg B.
 
 4.
 T must be a minimum spanning tree but P may not be a shortest s-t path
