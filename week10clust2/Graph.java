@@ -41,6 +41,21 @@ public class Graph {
 		return(leaderIdx);
 	}
 	
+	public int getLeaderIdxOpt(int nodeIdx) {
+		int leaderIdx = nodeIdx;
+		Node leader = nodes[nodeIdx];
+		int depth = 0;
+		while (leader.leaderIdx != -1) {
+			leaderIdx = leader.leaderIdx;
+			leader = nodes[leaderIdx];
+			depth++;
+		}
+		if (depth > 1) {
+			nodes[nodeIdx].leaderIdx = leaderIdx;
+		}
+		return(leaderIdx);
+	}
+	
 	public int getLeaderDepth(int nodeIdx) {
 		int depth = 0;
 		Node leader = nodes[nodeIdx];
@@ -70,17 +85,16 @@ public class Graph {
 		int[] neighbors = nodes[0].computePossibleNeighbors(bitSize);
 		
 		for (int nodeID = 0; nodeID < nodes.length; nodeID++) {
-			if (nodeID%10000 == 0) {
-				System.out.println("nodeID="+nodeID);
-				flattenChains();
-			}
+//			if (nodeID%10000 == 0) {
+//				System.out.println("nodeID="+nodeID);
+//			}
 			Node currentNode = nodes[nodeID];
 			neighbors = currentNode.computePossibleNeighbors(bitSize);
 			for (int neighborLabel : neighbors) {
 				if (nodesHash.containsKey(neighborLabel)) {
 					int neighborIdx = nodesHash.get(neighborLabel);
-					int leaderIdxOfNode = getLeaderIdx(nodeID);
-					int leaderIdxOfNeighbor = getLeaderIdx(neighborIdx);
+					int leaderIdxOfNode = getLeaderIdxOpt(nodeID);
+					int leaderIdxOfNeighbor = getLeaderIdxOpt(neighborIdx);
 					if (leaderIdxOfNode != leaderIdxOfNeighbor) {
 						mergeClusters(leaderIdxOfNode,leaderIdxOfNeighbor);
 					}

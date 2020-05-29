@@ -29,7 +29,7 @@ public class Week10clust2 {
 		}
 		
 		graph.computeThreeSpacing();
-		System.out.println("cluster count = "+graph.clusterCount);
+		System.out.println(graph.clusterCount);
 		
 		
 	}
