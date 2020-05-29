@@ -85,9 +85,6 @@ public class Graph {
 		int[] neighbors = nodes[0].computePossibleNeighbors(bitSize);
 		
 		for (int nodeID = 0; nodeID < nodes.length; nodeID++) {
-//			if (nodeID%10000 == 0) {
-//				System.out.println("nodeID="+nodeID);
-//			}
 			Node currentNode = nodes[nodeID];
 			neighbors = currentNode.computePossibleNeighbors(bitSize);
 			for (int neighborLabel : neighbors) {
@@ -98,6 +95,17 @@ public class Graph {
 					if (leaderIdxOfNode != leaderIdxOfNeighbor) {
 						mergeClusters(leaderIdxOfNode,leaderIdxOfNeighbor);
 					}
+				}
+			}
+		}
+	}
+	
+	public void printAllHammingDistances() {
+		for (int i = 0; i < nodes.length; i++) {
+			System.out.println("Hams for: "+Node.intToString(nodes[i].nodeLabel, bitSize));
+			for (int j = 0; j < nodes.length; j++) {
+				if (i != j) {
+					System.out.println(Node.intToString(nodes[j].nodeLabel, bitSize)+"  "+Node.getHammingDistance(nodes[i].nodeLabel, nodes[j].nodeLabel));
 				}
 			}
 		}

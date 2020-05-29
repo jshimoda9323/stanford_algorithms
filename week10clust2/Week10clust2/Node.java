@@ -91,9 +91,22 @@ public class Node {
 		return(ret);
 	}
 	
+	public static int getHammingDistance(int labelA, int labelB) {
+		int result = labelA ^ labelB;
+		int actualDist= 0;
+		for (int i = 0; i < 32; i++) {
+			if ((result & setOneMask) > 0) {
+				actualDist += 1;
+			}
+			result = result >> 1;
+		}
+		return actualDist;
+	}
+	
 	public int[] computePossibleNeighbors(int labelSize) {
-		int[] neighbors = new int[labelSize+nChooseR(labelSize,2)];
-		int nIdx = 0;
+		int[] neighbors = new int[1+labelSize+nChooseR(labelSize,2)];
+		neighbors[0] = nodeLabel;
+		int nIdx = 1;
 		// Get all 1-distance neighbors
 		for (int i = SELECT_BITS.length-labelSize; i < SELECT_BITS.length; i++) {
 			neighbors[nIdx] = nodeLabel ^ SELECT_BITS[i];

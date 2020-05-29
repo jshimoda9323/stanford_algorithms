@@ -31,7 +31,6 @@ public class Week10clust2 {
 		graph.computeThreeSpacing();
 		System.out.println(graph.clusterCount);
 		
-		
 	}
 
 }
