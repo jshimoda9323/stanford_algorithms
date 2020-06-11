@@ -23,9 +23,10 @@ public class week11q3 {
 		}
 		
 		int[][] MWIS = computeMWIS(nodes);
+		int[] finalNodes = reconstructMWIS(MWIS,MWIS[0].length);
 		int[] printNodeIndexes = {1, 2, 3, 4, 17, 117, 517, 997};
 		for (int i : printNodeIndexes) {
-			if (MWIS[1][i] == 2) {
+			if (finalNodes[i] == 1) {
 				System.out.print("1");
 			} else {
 				System.out.print("0");
@@ -52,6 +53,21 @@ public class week11q3 {
 			}
 		}
 		return(MWIS);
+	}
+	
+	public static int[] reconstructMWIS(int[][] MWIS, int len) {
+		int[] finalNodes = new int[len];
+		int i = finalNodes.length-1;
+		while(i>0) {
+			if (MWIS[1][i] == 2) {
+				finalNodes[i] = 1;
+				i-=2;
+			} else {
+				finalNodes[i] = 0;
+				i-=1;
+			}
+		}
+		return(finalNodes);
 	}
 
 }
