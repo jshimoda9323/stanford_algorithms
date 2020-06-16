@@ -11,4 +11,4 @@ If the most frequent letter has frequency less than 0.33, then all letters will 
 If a vertex is exlcluded from the optimal solution of two consecutive subproblems, then it is excluded from the optional solutions of all bigger subproblems.
 
 5.
-?
+The foruma is always correct in trees, and it leads to an efficient dynamic programming algorithm

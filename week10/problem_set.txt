@@ -1,5 +1,6 @@
 1.
 Only the modification of Kruskal's algorithm always computes a maximum-weight acyclic subgraph.
+Correct Answer: Neither.
 
 2.
 Both algorithms compute a maximum-cost spanning tree of G, but they might computer different ones.
@@ -13,3 +14,4 @@ A minimum bottleneck spanning tree is not always a minimum spanning tree, but a 
 5.
 Yes.  Suppose e E T and we decrease the cost of e.  Then, the new MST can be recomputed in O(m) deterministic time.
 Yes.  Suppose e ^E T and we increase the cost of e.  Then, the new MST can be recomputed in O(m) deterministic time.
+Correct Answer: all of them
