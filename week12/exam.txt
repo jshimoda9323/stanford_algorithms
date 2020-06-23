@@ -1,0 +1,63 @@
+1.
+[F] Suppose the edge e is not the cheapest edge that crosses cut (A,B)
+
+[T] Suppose edge e is the cheapest edge that crosses cut (A,B)
+
+[T] The minimum spanning tree is unique
+
+[T] Suppose the edge e is the most expensive edge contained in cycle C.
+
+2.
+[T] Suppose e^E(T) and we increase the cost of e
+[T] Suppose e^E(T) and we decrease the cost of e
+[T] Suppose eE(T)...
+[T] Suppose eE(T)...
+
+3.
+[T] Dijkstra's
+[T] Kruskal's
+[T] Prim's
+[F] MWIS
+
+4.
+[F] The single-source shortest path problem
+[T] The minimum bottleneck spanning tree problem.
+[T] The maximum-cost spanning tree problem
+[T] Given a connect undirected...
+
+
+5.
+[F] Suppose the greedy algo produces a k-clustering with spacing S.  Then, if x,y are two points in a common...
+[T] If the greedy algo produces a k-clustering with spacing S, then every other k...
+[T] If the greedy algo produces a k-clustering with spacing S, then the distance...
+[F] This greedy clustering algo can be viewed as Prim's minimum spanning tree algo, stopped early.
+
+6.
+[T] Schedule the requests in increasing order of deadline
+[F] None of the other options are correct
+[F] Schedule the requests in increase order of the product dj*pj
+[F] Schedule the requests in increasing order of processing time pj
+
+7.
+0.15+0.1=0.25: fed=fe,fd
+0.2+0.25=0.45: fced=fc + fed
+0.28+0.27=0.55: fab=fa + fb
+
+l(fa)=2 l(fb)=2 l(fc)=2 l(fe)=3 l(fd)=3
+
+2250
+
+8.
+[F] W1...Wm knapsacks
+[T] W1, W2
+[F] Total size exactly W
+[T] given budget k<=n
+
+9.
+[T] ak+b gap cost
+[T] longest common subsequence
+[T] longest common substring
+[T] permutation f
+
+10.
+2.23
