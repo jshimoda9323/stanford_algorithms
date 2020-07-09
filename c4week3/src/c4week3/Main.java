@@ -24,16 +24,17 @@ public class Main {
 			return;
 		}
 		
-		double distance = tsp_heuristic(graph);
-		System.out.println((int)distance);
+		long distance = tsp_heuristic(graph);
+		System.out.println(distance);
 	}
 	
-	public static double tsp_heuristic(Graph graph) {
+	public static long tsp_heuristic(Graph graph) {
 		int numNodes = graph.getNumNodes();
 		boolean[] has_visited = new boolean[numNodes];
 		int currNodeCount = numNodes-1;
 		int currNodeId = 0;
-		double totalDistance = 0;
+		long totalDistanceInt = 0;
+		double totalDistanceDec = 0.0d;
 		int minNodeId = 0;
 		
 		Arrays.fill(has_visited, false);
@@ -54,8 +55,17 @@ public class Main {
 					}
 				}
 			}
-			if (minDistance == Double.POSITIVE_INFINITY) { return(0); }
-			totalDistance += Math.sqrt(minDistance);
+			{
+				double distance_delta = Math.sqrt(minDistance);
+				long integer_delta = (long)distance_delta;
+				double decimal_delta = distance_delta - (double)integer_delta;
+				totalDistanceInt += integer_delta;
+				totalDistanceDec += decimal_delta;
+				if (totalDistanceDec > 1.0d) {
+					totalDistanceInt += 1;
+					totalDistanceDec -= 1.0d;
+				}
+			}
 			currNodeId = minNodeId;
 			currNodeCount--;
 			has_visited[minNodeId] = true;
@@ -70,9 +80,17 @@ public class Main {
 		{
 			double dx = graph.node_x[minNodeId] - graph.node_x[0];
 			double dy = graph.node_y[minNodeId] - graph.node_y[0];
-			totalDistance += Math.sqrt(dx*dx+dy*dy);
+			double distance_delta = Math.sqrt(dx*dx+dy*dy);
+			long integer_delta = (long)distance_delta;
+			double decimal_delta = distance_delta - (double)integer_delta;
+			totalDistanceInt += integer_delta;
+			totalDistanceDec += decimal_delta;
+			if (totalDistanceDec > 1.0d) {
+				totalDistanceInt += 1;
+				totalDistanceDec -= 1.0d;
+			}
 		}
-		return(totalDistance);
+		return(totalDistanceInt);
 	}
 
 }
