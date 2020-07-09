@@ -15,8 +15,8 @@ public class Main {
 			graph = new Graph(numNodes);
 			while(inScanner.hasNextLine()) {
 				String[] line = inScanner.nextLine().split("\\s+");
-				float x = Float.parseFloat(line[1]); 
-				float y = Float.parseFloat(line[2]);
+				double x = Double.parseDouble(line[1]); 
+				double y = Double.parseDouble(line[2]);
 				graph.addNode(x, y);
 			}
 		} catch (Exception e) {
@@ -49,6 +49,7 @@ public class Main {
 					double dx = graph.node_x[currNodeId] - graph.node_x[n];
 					double dy = graph.node_y[currNodeId] - graph.node_y[n];
 					double distance_squared = dx*dx + dy*dy;
+					//double distance_squared = Math.sqrt(dx*dx + dy*dy);
 					if (distance_squared < minDistance) {
 						minDistance = distance_squared;
 						minNodeId = n;
@@ -57,6 +58,7 @@ public class Main {
 			}
 			{
 				double distance_delta = Math.sqrt(minDistance);
+				//double distance_delta = minDistance;
 				long integer_delta = (long)distance_delta;
 				double decimal_delta = distance_delta - (double)integer_delta;
 				totalDistanceInt += integer_delta;

@@ -13,7 +13,7 @@ public class Graph {
 		nodeIdx = 0;
 	}
 	
-	public void addNode(float x, float y) {
+	public void addNode(double x, double y) {
 		node_x[nodeIdx] = x;
 		node_y[nodeIdx] = y;
 		nodeIdx++;
