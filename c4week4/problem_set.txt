@@ -5,10 +5,10 @@ The generic local search algorithm is guaranteed to eventually converge to an op
 This local search algorithm is guaranteed to terminate in a polynomial number of iterations.
 
 3.
-?
+(k-1)/k
 
 4.
-at most 25%
+at most 100%
 
 5.
-zero.
+at most 50%
