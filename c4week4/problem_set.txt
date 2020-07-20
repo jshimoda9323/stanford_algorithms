@@ -1,0 +1,14 @@
+1.
+The generic local search algorithm is guaranteed to eventually converge to an optimal solution.
+
+2.
+This local search algorithm is guaranteed to terminate in a polynomial number of iterations.
+
+3.
+?
+
+4.
+at most 25%
+
+5.
+zero.
