@@ -1,5 +1,6 @@
 1.
 There is no NP-complete problem that can be solved in O(n^log(n)) time, where n is the size of the input.
+Some NP-complete problems are polynomial-time solvable, and some NP-complete problems are not polynomial-time solvable.
 
 2.
 If TSP2 is polynomial-time solvable, then so is TSP1.  If HAM2 is polynomial-time solvable, then so is HAM1.
@@ -12,3 +13,5 @@ If the minimum-size vertext cover problem can be solved in time O(T(n)) in gener
 
 5.
 Consider a TSP instance in which every edge cost is the Euclidean distance....
+
+
