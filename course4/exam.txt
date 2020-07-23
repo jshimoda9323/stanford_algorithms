@@ -1,0 +1,62 @@
+1.
+y Bellman-Ford shortest path
+y optimal binary search tree
+n knapsack
+n sequence alignment
+n Floyd-Warshall
+
+2.
+y given a DAG, compute the length of a longest path between any pair of vertices.
+y given a directed graph with nonnegative edge lengths, compute the length of a maximum-length shortest path between any pair of vertices.
+n Given a directed graph with real-valued edge lengths, compute the length of a longest cycle-free path between any pair of vertices
+y Given a directed graph with nonnegative edge lengths, compute the lnegth of a longest cycle-free path between any pair of vertices.
+
+3.
+n Run Dijkstra's algorithm n times
+y The Floyd-Warshall algorithm
+y The Bellman-Ford algorithm
+n Johnson's reweighting algorithm
+
+4.
+T If your boss criticizes you...
+F Since the dynamic programming algorithm design paradigm is only useful...
+T You should not try to design an algorithm...
+F NP-completeness is a death-sentence...
+
+5.
+n There is an NP-complete problem that is polynomial-time solvable
+n There is an NP-complete problem that can be solved in O(n^logn) time.
+y Some NP-complete...
+n There is no NP-complete problem...
+
+6.
+y Given an undirected graph G and a value for k such that k=O(logn)...does G have an independent set of size at least k?
+y Given an undirected graph G and a value for k such that k=O(logn)...does G have a vertex cover of size at most k?
+n Given an undirected graph and a constant value for k=O(1)...does G have an independent set of size at least k?
+n Given an undirected graph and a constant value for k=O(1)...does G have a vertex covert of size at most k?
+
+7.
+n No. Since there are an exponential number of subproblems...
+y No. Since we sometimes perform a super-polynomial amount of work computing the solution of a single subproblem...
+n No. Since we perform a super-polynomial amount of work extracting the final TSP solution...
+n No. A polynomial-time algorithm for the TSP does not necessarily imply that P=NP.
+n Yes, it does.
+
+8.
+n If all items have the same value/size ratio...
+y If all items have the same size...
+y If the size of every item is at most 20%...
+y The algorithm always outputs a feasible solution with total value at least 50%...
+n If all items have the same value
+
+9.
+n The generic local search algo is guaranteed to eventually converge to an optimal solution.
+y The output of the generic local search algo generally depends on the choice of the starting point.
+y The output of the generic local search algo generally depends on the choice of the superior neighboring solution.
+n The generic local search is guaranteed to terminate in a polynomial number of iterations.
+
+10.
+y item sizes are positive integers <= n^5
+y item values, sizes, and W are positive integers
+n item values are positive integers <= n^5
+y If there is a polynomial-time algo for the Knapsack problem in general, then P=NP.
