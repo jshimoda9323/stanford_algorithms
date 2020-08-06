@@ -1,0 +1,17 @@
+1. nlog(n)
+
+2. True
+
+3.
+Sometimes yes, sometimes no
+Yes if f(n) <= g(n)
+
+4.
+O(nk^2)
+
+5. acebd
+n^0.5, n^1.5, n^5/3, 10^n, 2^((log(n))^0.5)
+
+5. EADBC
+n^2, n^2*log(n), n^(log(n)), 2^n, 2^2^n
+
