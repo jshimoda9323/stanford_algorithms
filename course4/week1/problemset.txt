@@ -1,0 +1,14 @@
+1.
+Y It is a tree, with all edges directed away from s.
+
+2.
+it correctly computes shortest paths if and only if the input graph has not negative cost cycle.
+
+3.
+O(km)
+
+4.
+none of the other answers are correct
+
+5.
+2^n
