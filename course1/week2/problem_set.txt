@@ -1,16 +1,6 @@
-1.
-O(m)
-
-2.
-O(n^2)
-
-3.
-r<=d
-r>=d/2
-
-4.
-sometimes yes, sometimes no
-
-5.
-could remain the same
+1. O(n^2)
+2. O(n^2*log(n))
+3. O(n^(log3(5))
+4. O(log(b))
+5. O(1)
 
