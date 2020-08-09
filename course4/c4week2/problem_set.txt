@@ -1,5 +1,4 @@
 1.
-There is no NP-complete problem that can be solved in O(n^log(n)) time, where n is the size of the input.
 Some NP-complete problems are polynomial-time solvable, and some NP-complete problems are not polynomial-time solvable.
 
 2.
@@ -9,7 +8,7 @@ If TSP2 is polynomial-time solvable, then so is TSP1.  If HAM2 is polynomial-tim
 For a griven source s and destination t, compute the length of a shortest s-t path that has exactly n-1 edges (or +inf, if not such path exists).  The path is allowed to contain cycles.
 
 4.
-If the minimum-size vertext cover problem can be solved in time O(T(n)) in general graphs, then the maximum-size independent set problem can be solved in O(T(n)) in general graphs.
+All three are true.
 
 5.
 Consider a TSP instance in which every edge cost is the Euclidean distance....
