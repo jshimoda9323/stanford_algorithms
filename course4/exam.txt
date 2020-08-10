@@ -30,6 +30,7 @@ n Some NP-complete...
 y There is no NP-complete problem...
 
 6.
+(following is incorrect!) 0.25/1pt
 y Given an undirected graph G and a value for k such that k=O(logn)...does G have an independent set of size at least k?
 y Given an undirected graph G and a value for k such that k=O(logn)...does G have a vertex cover of size at most k?
 n Given an undirected graph and a constant value for k=O(1)...does G have an independent set of size at least k?
