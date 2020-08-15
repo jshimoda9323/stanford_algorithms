@@ -2,5 +2,5 @@
 2. O(n^2*log(n))
 3. O(n^(log3(5))
 4. O(log(b))
-5. O(1)
+5. O(loglog(n)
 
