@@ -1,0 +1,18 @@
+1.
+n-1
+
+2.
+F For every graph G with n nodes and every min cut (A,B) P <= p
+F For every graph G with n nodes there exists a min cut (A,B) such that P <= p
+T For every graph G with n nodes and every min cut (A,B) P >= p
+T There exists graph G with n nodes and a min cut (A,B) such that P <= p
+T For every graph G with n nodes there exists a min cut (A,B) such that P>=p
+
+3.
+2*a-1
+
+4.
+-log(n)/log(a)
+
+5.
+n-1
