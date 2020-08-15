@@ -11,7 +11,7 @@ public class Week10clust1 {
 		Graph graph;
 		try (Scanner inScanner = new Scanner(inFile)) {
 			String[] line = inScanner.nextLine().split("\\s+");
-			graph = new Graph(Integer.parseInt(line[0]),Integer.parseInt(line[1]));
+			graph = new Graph(Integer.parseInt(line[0]));
 			while(inScanner.hasNextLine()) {
 				line = inScanner.nextLine().split("\\s+");
 				graph.setNextEdge(Integer.parseInt(line[0]),Integer.parseInt(line[1]),Integer.parseInt(line[2]));
@@ -22,7 +22,7 @@ public class Week10clust1 {
 		}
 		
 		int cost = graph.computeKCluster(4);
-		System.out.println("4-cluster cost = "+cost);
+		System.out.println(cost);
 	}
 
 }
