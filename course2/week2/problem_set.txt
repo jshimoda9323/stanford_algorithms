@@ -1,0 +1,30 @@
+1.
+yes There is a shortest s-t path with no repeated vertices...
+no The shortest s-t path must include the minimum...
+no The shortest s-t path must include the maximum...
+yes The shortest s-t path may have as many as n-1...
+
+2.
+yes when all edge lengths are distinct powers of 2
+n
+n
+n
+
+3.
+y Always
+n
+n
+n
+
+4.
+y Dijkstra's algo always terminates, but in some cases the paths it computes will not be the shortest paths...
+n
+n
+y Dijkstra's algo always terminates, and in some cases the paths it computes will be the shortest paths...
+
+5.
+n
+y Dijkstra's algo always terminates, and in some cases... WRONG
+n
+y Disjktra's algo always terminates, but in some cases...
+
