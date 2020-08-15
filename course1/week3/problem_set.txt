@@ -2,12 +2,13 @@
 1-2a
 
 2.
+-(log(n)/log(a)) <= d <= -(log(n)/log(1-a))
 
 3.
 log(n),n
 
 4.
-23
+27 (wrong)
 
 5.
 Y and Z not independent, E[Y*Z] != E[Y]*E[Z]
