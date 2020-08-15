@@ -1,0 +1,15 @@
+1.
+O(n) and O(1)
+
+2.
+O(1) and O(n)
+
+3.
+Find the 5th smallest element
+
+4.
+O(n)
+
+5.
+The height of every relaxed red-black tree with n nodes is O(log n). (wrong)
+There is a relaxed (wrong)
