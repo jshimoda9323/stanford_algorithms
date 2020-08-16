@@ -78,7 +78,7 @@ s=6
 4.
 [Y] ak+b gap cost option.
 [Y] longest common substring
-[N] longest common subsequence
+[Y] longest common subsequence
 [Y] does there exist a permuatation...
 
 5. O(1), O(n), O(n^2)
