@@ -1,0 +1,30 @@
+1.
+9,4,5
+
+2.
+2
+
+3.
+O(n*log(n))
+
+4.
+O(n*log(n)) expected, O(n^2) worst case
+
+5.
+T yes if f(n) <= g(n)...
+T maybe, maybe not
+
+6.
+1-2a
+
+7.
+log(e)/log(1-p)
+
+8.
+nk^2 (incorrect)
+
+9.
+n^(log2(7))
+
+10.
+The rate at which the work-per-subproblem is shrinking
